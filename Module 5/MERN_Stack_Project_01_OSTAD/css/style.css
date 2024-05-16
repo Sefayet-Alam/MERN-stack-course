@@ -1,0 +1,33 @@
+.p1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* Adjust as needed */
+    font-family: 'Arial', sans-serif;
+    color: red;
+}
+
+.heading1 {
+    font-family: 'Open Sans';
+    /* Replace 'Arial' with your preferred font */
+    color: white;
+    background-color: green;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.custom-h2 {
+    background-color: purple;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.custom-bg {
+    background: #0367f4;
+    color:red;
+    margin: 5px, 5px;
+    border-radius: 5px;
+}
