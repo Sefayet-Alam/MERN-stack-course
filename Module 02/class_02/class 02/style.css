@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root{
+    --theme-primary-color:#f54284;
+    --theme-secondary-color:#0a3e23;
+    --theme-info-color:#2e28d0;
+}
+
+
+
+
+.mern{
+    display: flex;
+    justify-content: start;
+    word-spacing: 70px;
+    word-wrap: normal;
+    position: fixed;
+}
+
+
+
+img{
+    filter: grayscale(100%) !important;
+}
+
+
+.my-img{
+    filter: grayscale(0%)
+}
+
+
+
+.my-description{
+    line-height: 200%;
+    letter-spacing: 20px;
+    text-decoration: underline;
+    font-family: "Raleway", sans-serif;
+}
+
+.my-description-others{
+    line-height: 200%;
+    text-decoration: underline;
+    font-family: "Pacifico", cursive;
+}
+
+.box1{
+    width: 300px;
+    height: 300px;
+    background-color: var(--theme-primary-color);
+    padding: 50px 40px 20px 90px;
+    overflow: auto;
+}
+.box2{
+    width: 300px;
+    height: 300px;
+    background-color: var(--theme-secondary-color);
+}
+.box3{
+    width: 300px;
+    height: 300px;
+    background-color: var(--theme-primary-color);
+}

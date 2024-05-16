@@ -1,0 +1,55 @@
+.root {
+  display: flex;
+  min-width: 1280px;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav .menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav .menu>li {
+  padding: 10px;
+}
+
+.nav .menu .dropdown {
+  position: relative;
+}
+
+.nav .menu .dropdown .child {
+  position: absolute;
+  background: #ddd;
+  padding: 10px 30px;
+  border-radius: 10px;
+  top: 40px;
+  left: -5px;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.nav .menu .dropdown:hover .child {
+  top: 32px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.my-web-bg {
+  background-color: #0af57f;
+  background-image: url("https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg");/*use "copy image link" */
+  
+}

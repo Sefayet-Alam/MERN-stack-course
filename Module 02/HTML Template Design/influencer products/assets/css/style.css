@@ -1,0 +1,103 @@
+/* common css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0px 15px;
+  margin: auto;
+}
+
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.btn {
+  background-color: rgb(224, 44, 109);
+  font-size: 20px;
+  padding: 11px 25px;
+  border-radius: 31px;
+  border: none;
+  color: #fff;
+}
+
+/* -----header area
+=================================== */
+.header-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.header-area .logo img {
+  height: 30px;
+}
+
+.header-area .menu ul {
+  display: flex;
+}
+.header-area .menu ul li a {
+  font-size: 20px;
+  margin: 10px;
+  color: #3a3a3a;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+/* -----hero area
+=================================== */
+
+.hero-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-area .content {
+  width: 60%;
+  padding-right: 30px;
+}
+.hero-area .hero-img {
+  width: 40%;
+  padding-left: 30px;
+}
+.hero-area .hero-img img {
+  width: 100%;
+}
+
+.hero-area .content h1 {
+  font-size: 60px;
+  font-weight: 700px;
+  line-height: 1;
+}
+
+.hero-area .content p {
+  font-size: 18px;
+  padding: 10px 0;
+}
+.hero-area .content button {
+  margin: 10px 0;
+}
+.hero-area .content button i {
+  font-size: 20px;
+}
