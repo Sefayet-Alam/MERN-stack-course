@@ -1,0 +1,41 @@
+1. What is Responsive Design-->SM/MD/LG/XL?
+2. What is Adaptive Design?- Totally Change The Component 
+3. Where we use Responsive(90%) & Adaptive Design(10%)?
+
+
+
+Responsive Grid System 
+............................
+(<576px)                  -> extra small Mobile Phone             -> col-3
+(≥576px && ≥768px )       -> small                                -> col-sm-3
+(≥768px && ≥992px)        -> medium -> 13/14/15/17 Display HD     -> col-md-3
+(≥1200px && ≥1400px)      -> large -> 21/24/27 Display FHD        -> col-lg-3
+(≥1400px)                 -> extra large- 32/46/100 Display 2K    -> col-xl-3
+
+
+
+Responsive Utilities Margin,Padding
+............................
+Margin (),sm,md,lg,xl
+Padding (),sm,md,lg,xl
+
+
+
+
+The Final Way
+Media Query (Height,Width,Margin,Padding,Font-Size)
+............................
+0px-339px
+340px-360px
+361px-575.98px
+576px-767.98px
+768px-991.98px
+992px-1199.98px
+1200px- Upper 
+
+
+
+
+Responsive Testing Tools 
+..................
+Mozila Fire-fox Responsive Design Mode
