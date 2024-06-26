@@ -59,7 +59,7 @@ function filterOddNumbers(input){
 var ar=[1,5,3,2,6,8,10,11,13,16,20]
 var filtered=filterOddNumbers(ar);
 
-console.log("Filtering even numbers of the array ["+ar+"] we get: ["+filtered+"]");
+console.log("Keeping only the odd numbers of the array ["+ar+"] we get: ["+filtered+"]");
 
 
 //6. 
