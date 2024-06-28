@@ -1,4 +1,10 @@
-//Github link:
+// //Github link:
+
+/*
+Name: Sefayet Alam
+email: sefayetalam14@gmail.com
+*/
+
 //1.
 
 function findPower(voltage,current){
@@ -36,10 +42,10 @@ console.log("Merged array: "+ans);
 //4.
 
 function arrayValuesTypes(arr) {
-    let ret=arr.map((value) => typeof value);
+    let ret=JSON.stringify(arr.map((value) => (typeof value)));
     return ret;
 }
-  
+
 let Arr = [1, 2, "null", []];
 let result = arrayValuesTypes(Arr);
 

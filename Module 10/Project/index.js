@@ -88,7 +88,7 @@ console.log("Sorting the array ["+ar3+"] we get: ["+sortArray(ar3)+"]");
 //8.
 
 function capitalizeFirstLetter(input){
-    return input.charAt(0).toUpperCase()+input.slice(1);
+    return JSON.stringify(input.charAt(0).toUpperCase()+input.slice(1));
 }
 console.log(capitalizeFirstLetter("hello"));
 
