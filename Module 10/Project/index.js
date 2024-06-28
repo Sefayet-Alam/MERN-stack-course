@@ -1,3 +1,8 @@
+/*
+Name: Sefayet Alam
+email: sefayetalam14@gmail.com
+*/
+
 
 //1.
 
@@ -21,6 +26,7 @@ function isEven(num) {
     return (a % 2) == 0;
 }
 
+num=7;
 if (isEven(num) == true) console.log("The number "+ num +" is Even.")
 else console.log("The number "+num+" is Odd.")
 
@@ -33,11 +39,11 @@ function findMax(arr){
 }
 
 let arr=[1,2094,10000000,2409,222,24,2];
-console.log("Maximum no of the array ["+arr+"] is: "+findMax(arr));
+console.log("Maximum no of the array "+JSON.stringify(arr)+" is: "+findMax(arr));
 
 //4.
 function reverseString(str){
-    return str.split('').reverse().join('');
+    return JSON.stringify(str.split('').reverse().join(''));
 }
 
 let p="Ruthless__"
@@ -59,7 +65,7 @@ function filterOddNumbers(input){
 var ar=[1,5,3,2,6,8,10,11,13,16,20]
 var filtered=filterOddNumbers(ar);
 
-console.log("Keeping only the odd numbers of the array ["+ar+"] we get: ["+filtered+"]");
+console.log("Keeping only the odd numbers of the array "+JSON.stringify(ar)+" we get: "+JSON.stringify(filtered));
 
 
 //6. 
@@ -74,16 +80,16 @@ function sumArray(input){
 }
 
 var ar2=[1,5,3,2,6,8,10,11,13,16,20];
-console.log("Sum of the array ["+ar2+"] is: "+sumArray(ar2));
+console.log("Sum of the array "+JSON.stringify(ar2)+" is: "+sumArray(ar2));
 
 //7.
 
 function sortArray(input){
     let ret=input.sort((a,b)=>a-b);
-    return ret; 
+    return JSON.stringify(ret); 
 }
 var ar3=[99,100,13,23,54,6757,75];
-console.log("Sorting the array ["+ar3+"] we get: ["+sortArray(ar3)+"]");
+console.log("Sorting the array "+JSON.stringify(ar3)+" we get: "+sortArray(ar3));
 
 //8.
 

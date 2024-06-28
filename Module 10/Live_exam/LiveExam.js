@@ -1,4 +1,4 @@
-// //Github link:
+// //Github link: https://github.com/Sefayet-Alam/MERN-stack-course/blob/main/Module%2010/Live_exam/LiveExam.js
 
 /*
 Name: Sefayet Alam
@@ -24,17 +24,17 @@ function findMaxNumber(ara){
 }
 
 let ara=[];
-console.log("Maximum no of the array ["+ara+"] is: "+findMaxNumber(ara));
+console.log("Maximum no of the array "+JSON.stringify(ara)+" is: "+findMaxNumber(ara));
 
 
 //3.
 
 function mergeArrays(arr1,arr2){
-    return arr1.concat(arr2);
+    return JSON.stringify(arr1.concat(arr2));
 }
 
 let A=[1,2,"ANCK",5,'6'];
-let B=[4,"YOO",'z'];
+let B=[4,"YOO",'z',100];
 
 let ans=mergeArrays(A,B);
 console.log("Merged array: "+ans);
@@ -42,7 +42,7 @@ console.log("Merged array: "+ans);
 //4.
 
 function arrayValuesTypes(arr) {
-    let ret=JSON.stringify(arr.map((value) => (typeof value)));
+    let ret=JSON.stringify(arr.map((value) => (typeof value))).replace(/\n\s*/g, '').replace(/,\s*/g, ', ');
     return ret;
 }
 
