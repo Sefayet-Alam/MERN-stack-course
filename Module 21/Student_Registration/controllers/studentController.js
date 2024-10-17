@@ -107,3 +107,29 @@ exports.updateProfile = async (req, res) => {
         res.status(500).json({ msg: 'Server error' });
     }
 };
+
+// Upload student file (any type)
+
+exports.uploadStudentFile = async (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ success: false, msg: 'No file uploaded' });
+    }
+
+    const uploadedFile = req.file.filename;
+
+    try {
+        // Here, you can save the file information to the student's record
+        const student = await Student.findByIdAndUpdate(
+            req.student.id,
+            { uploadedFile }, // Store the file name or path
+            { new: true, runValidators: true }
+        ).select('-password'); // Exclude password
+
+        if (!student) return res.status(404).json({ success: false, msg: 'Student not found' });
+
+        res.status(200).json({ success: true, msg: 'File uploaded successfully', student });
+    } catch (err) {
+        console.error('File upload error:', err);
+        res.status(500).json({ success: false, msg: 'Server error', error: err.message });
+    }
+};
