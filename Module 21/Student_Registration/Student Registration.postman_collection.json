@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "62acc552-0b5b-4b13-afe0-7eab43f66857",
+		"name": "Student Registration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36246967"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"JohnD\",\r\n    \"firstName\": \"John\",\r\n    \"fathersName\": \"Father Doe\",\r\n    \"mothersName\": \"Mother Doe\",\r\n    \"email\": \"johney@example.com\",\r\n    \"password\": \"securepassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/register",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"johney@example.com\",\r\n    \"password\": \"securepassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload file",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTE0N2IzMmFmMDA4OGMxMWIxMmNkZiIsImlhdCI6MTcyOTE4OTk4NywiZXhwIjoxNzI5MTkzNTg3fQ.TNqtvzBj0f52FUDA4XBF8OrlhAxP4d2RbW_I-WkFfsY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "fileesss",
+							"type": "file",
+							"src": []
+						}
+					],
+					"options": {
+						"formdata": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/students/upload/file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"students",
+						"upload",
+						"file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read File",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTE0N2IzMmFmMDA4OGMxMWIxMmNkZiIsImlhdCI6MTcyOTE4OTg1NSwiZXhwIjoxNzI5MTkzNDU1fQ.jCB9qnt4qabTpgMygeuHRN-eVnunW4eT2W4mFs5rXVE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "C:\\Users\\ASUS\\OneDrive\\Desktop\\2003121_medical_certificate_for_attendance.pdf"
+						}
+					],
+					"options": {
+						"formdata": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/file/1729189824375.pdf",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"file",
+						"1729189824375.pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTE0N2IzMmFmMDA4OGMxMWIxMmNkZiIsImlhdCI6MTcyOTE4ODY2OSwiZXhwIjoxNzI5MTkyMjY5fQ.TbCPLYwQCG_w8xhKJ9kemZFbbEh9eYRfGE1ABkMC2AY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "C:\\Users\\ASUS\\OneDrive\\Desktop\\2003121_medical_certificate_for_attendance.pdf"
+						}
+					],
+					"options": {
+						"formdata": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/file/1729189824375.pdf",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"file",
+						"1729189824375.pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProfileRead",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"johney@example.com\",\r\n    \"password\": \"securepassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/profile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Name\",\r\n  \"firstName\": \"UpdatedFirst\",\r\n  \"fathersName\": \"Updated Father\",\r\n  \"mothersName\": \"Updated Mother\",\r\n  \"profilePic\": \"https://example.com/path-to-new-profile-pic.jpg\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/profile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000/api/students",
+			"type": "string"
+		}
+	]
+}
