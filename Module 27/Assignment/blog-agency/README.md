@@ -10,9 +10,10 @@ This project is a full-stack web application that allows users to manage blogs, 
 - **Backend**: [Deployed on Vercel](https://www.vercel.com/)
 
 ## Images
+
+![BLOGAPP](https://github.com/user-attachments/assets/63fe467c-ac76-4757-b864-3cce05635744)
 ![blogapp_07](https://github.com/user-attachments/assets/962b252f-d84d-48aa-8b93-39a7535b4e9e)
 ![blog_app_08](https://github.com/user-attachments/assets/53f4acc1-e7b4-443e-a69f-37eb0e72b20b)
-![BLOGAPP](https://github.com/user-attachments/assets/63fe467c-ac76-4757-b864-3cce05635744)
 ![Blogapp_02](https://github.com/user-attachments/assets/f418ba4d-a18a-4fd9-9307-59d4028cb836)
 ![blogapp_03](https://github.com/user-attachments/assets/9b9a57e4-e619-4210-99f7-5182a3be6739)
 ![blogapp_04](https://github.com/user-attachments/assets/f1801dca-1cf2-4595-babf-b980c5d0a6d8)
