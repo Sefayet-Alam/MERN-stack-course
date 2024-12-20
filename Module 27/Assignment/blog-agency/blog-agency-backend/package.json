@@ -2,10 +2,10 @@
   "name": "blog-agency-backend",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "build": "echo 'Backend project - no build step required'",
-  "start": "nodemon server.js"
-},
+  "scripts": {
+    "build": "echo 'Backend project - no build step required'",
+    "start": "nodemon server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
