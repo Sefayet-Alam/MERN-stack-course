@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { fetchBlogs } from "../API/api";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
   const [error, setError] = useState("");
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getBlogs = async () => {
       try {
         const response = await fetchBlogs();
-        setBlogs(response.data.slice(0, 6)); // Fetch only the first 6 blogs
+        setBlogs(response.data.slice(0, 3)); // Limit to 3 blogs
       } catch (err) {
         console.error(err);
         setError("Failed to load blogs. Please try again later.");
@@ -31,7 +31,10 @@ const Home = () => {
           <p className="hero-subtitle">
             Your one-stop solution for blogs, services, and dynamic teams!
           </p>
-          <button className="cta-button" onClick={() => navigate("/blogs")}>
+          <button
+            className="cta-button"
+            onClick={() => navigate("/blogs")} // Navigate to the Blogs page
+          >
             Explore Blogs
           </button>
         </div>
@@ -46,8 +49,7 @@ const Home = () => {
             blogs.map((blog) => (
               <div key={blog._id} className="blog-card">
                 <h3 className="blog-title">{blog.title}</h3>
-                <p className="blog-snippet">{blog.content.substring(0, 100)}...</p>
-                {/* <button className="read-more-button">Read More</button> */}
+                <p className="blog-snippet">{blog.content.substring(0, 550)}...</p>
               </div>
             ))
           ) : (
@@ -62,14 +64,9 @@ const Home = () => {
         <p className="custom-text">
           We are dedicated to providing the best blog management services,
           along with dynamic team support and reliable services. Explore our
-          team, and the latest blogs to keep you informed. Join us today!
+          team and the latest blogs to keep you informed. Join us today!
         </p>
       </div>
-
-      {/* Footer */}
-      <footer className="home-footer">
-        <p>&copy; 2024 Blog Agency. All Rights Reserved.</p>
-      </footer>
     </div>
   );
 };

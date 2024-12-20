@@ -1,7 +1,6 @@
-/* General Styles */
 .home {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #222; /* Slightly darker than #333 for better contrast */
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -10,7 +9,7 @@
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('https://source.unsplash.com/1920x1080/?technology,blog') no-repeat center center/cover;
+    background: url('https://cdn.pixabay.com/photo/2020/06/13/17/51/milky-way-5295160_1280.jpg') no-repeat center center/cover;
     height: 400px;
     display: flex;
     align-items: center;
@@ -19,7 +18,8 @@
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.6); /* Add a dark overlay */
+    background: linear-gradient(135deg, rgba(0, 121, 191, 0.9), rgba(0, 81, 128, 0.9)); 
+    /* Gradient with modern blue tones */
     padding: 20px;
     text-align: center;
     border-radius: 12px;
@@ -28,12 +28,16 @@
 .hero-title {
     font-size: 48px;
     font-weight: bold;
+    color: #ffffff; /* White text for contrast */
     margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .hero-subtitle {
     font-size: 20px;
+    color: #e1e1e1; /* Light gray for a modern look */
     margin-bottom: 20px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Consistent shadow effect */
 }
 
 .cta-button {
@@ -70,11 +74,13 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    /* Center-align blogs */
+    margin: 0 auto;
 }
 
 .blog-card {
-    width: 320px;
-    padding: 20px;
+    width: 160px; /* Reduced width */
+    padding: 10px; /* Reduced padding */
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -87,32 +93,17 @@
 }
 
 .blog-title {
-    font-size: 20px;
+    font-size: 10px; /* Reduced font size */
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
 }
 
 .blog-snippet {
-    font-size: 16px;
+    font-size: 14px; /* Reduced font size */
     color: #555;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.read-more-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.read-more-button:hover {
-    background: #0056b3;
+    line-height: 1.4;
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 /* Custom Section */
@@ -128,19 +119,6 @@
     line-height: 1.8;
 }
 
-/* Footer */
-.home-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: white;
-    font-size: 14px;
-}
-
-.home-footer p {
-    margin: 0;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
@@ -149,6 +127,7 @@
 
     .blogs-list {
         flex-direction: column;
+        /* Stack blogs on small screens */
     }
 
     .blog-card {

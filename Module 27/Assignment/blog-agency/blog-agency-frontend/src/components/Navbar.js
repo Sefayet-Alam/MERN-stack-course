@@ -1,3 +1,4 @@
+import { FaBlog } from "react-icons/fa"; // Import an icon
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -6,6 +7,7 @@ const Navbar = ({ isLoggedIn, handleLogout }) => {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
+                <FaBlog size={24} color="#ff7f50" /> {/* Icon added here */}
                 <Link to="/">Sefayet's Blogs</Link>
             </div>
             <ul className="navbar-links">

@@ -26,14 +26,19 @@ const Team = () => {
 
     return (
         <div className="team-page">
-            <h1 className="team-title">Meet Our Team</h1>
+            <h1 className="team-title">Meet My Team</h1>
             <div className="team-container">
                 {teams.length > 0 ? (
                     teams.map((team) => (
                         <div className="team-member" key={team._id}>
-                            <img src={team.photo || "/Profile-Male-PNG.png"} alt={team.name} className="team-photo" />
+                            <img
+                                src={team.image || "/Profile-Male-PNG.png"}
+                                alt={team.name}
+                                className="team-photo"
+                            />
                             <h3 className="team-name">{team.name}</h3>
                             <p className="team-role">{team.role}</p>
+                            <p className="team-bio">{team.bio}</p>
                         </div>
                     ))
                 ) : (

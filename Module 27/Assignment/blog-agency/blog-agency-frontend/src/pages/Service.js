@@ -28,8 +28,15 @@ const Service = () => {
         {services.length > 0 ? (
           services.map((service) => (
             <div key={service._id} className="service-card">
-              <h3>{service.name}</h3>
-              <p>{service.description}</p>
+              <div className="service-icon-container">
+                <img
+                  src={service.icon || "https://via.placeholder.com/80"}
+                  alt={`${service.name} Icon`}
+                  className="service-icon"
+                />
+              </div>
+              <h3 className="service-name">{service.name}</h3>
+              <p className="service-description">{service.description}</p>
             </div>
           ))
         ) : (
