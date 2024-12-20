@@ -18,6 +18,13 @@ import {
   DialogTitle,
 } from "@mui/material";
 
+// Use environment variable for API base URL
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
+if (!API_BASE_URL) {
+  console.error("REACT_APP_API_URL environment variable is not set.");
+}
+
 const Dashboard = () => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [data, setData] = useState({ blogs: [], teams: [], services: [] });
@@ -37,20 +44,14 @@ const Dashboard = () => {
     }
 
     try {
-      const blogsResponse = await axios.get("http://localhost:5000/api/blogs", {
-        headers: {
-          Authorization: `${token}`,
-        },
+      const blogsResponse = await axios.get(`${API_BASE_URL}/blogs`, {
+        headers: { Authorization: `${token}` },
       });
-      const teamsResponse = await axios.get("http://localhost:5000/api/teams", {
-        headers: {
-          Authorization: `${token}`,
-        },
+      const teamsResponse = await axios.get(`${API_BASE_URL}/teams`, {
+        headers: { Authorization: `${token}` },
       });
-      const servicesResponse = await axios.get("http://localhost:5000/api/services", {
-        headers: {
-          Authorization: `${token}`,
-        },
+      const servicesResponse = await axios.get(`${API_BASE_URL}/services`, {
+        headers: { Authorization: `${token}` },
       });
       setData({
         blogs: blogsResponse.data,
@@ -70,15 +71,13 @@ const Dashboard = () => {
 
     try {
       const url = currentRow?._id
-        ? `http://localhost:5000/api/${currentEntity}/${currentRow._id}`
-        : `http://localhost:5000/api/${currentEntity}`;
+        ? `${API_BASE_URL}/${currentEntity}/${currentRow._id}`
+        : `${API_BASE_URL}/${currentEntity}`;
       const method = currentRow?._id ? "put" : "post";
 
       console.log("Saving Data:", formData);
       const response = await axios[method](url, formData, {
-        headers: {
-          Authorization: `${token}`,
-        },
+        headers: { Authorization: `${token}` },
       });
 
       console.log("Save Successful:", response.data);
@@ -97,10 +96,8 @@ const Dashboard = () => {
 
     console.log("Deleting ID:", id);
     try {
-      const response = await axios.delete(`http://localhost:5000/api/${entity}/${id}`, {
-        headers: {
-          Authorization: `${token}`,
-        },
+      const response = await axios.delete(`${API_BASE_URL}/${entity}/${id}`, {
+        headers: { Authorization: `${token}` },
       });
 
       console.log("Delete Successful:", response.data);
@@ -157,7 +154,11 @@ const Dashboard = () => {
               {columns.map((column) => (
                 <TableCell key={column}>
                   {column === "image" || column === "icon" ? (
-                    <img src={row[column]} alt={column} style={{ width: "50px", height: "50px" }} />
+                    <img
+                      src={row[column]}
+                      alt={column}
+                      style={{ width: "50px", height: "50px" }}
+                    />
                   ) : (
                     row[column]
                   )}
