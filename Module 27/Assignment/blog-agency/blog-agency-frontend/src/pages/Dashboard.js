@@ -196,7 +196,7 @@ const Dashboard = () => {
         onClick={() => handleOpenDialog("teams")}
         sx={{ marginBottom: 4 }}
       >
-        Create Team
+        Create Team Member
       </Button>
       {renderTable("teams", data.teams, ["name", "role", "image", "bio"])}
 
