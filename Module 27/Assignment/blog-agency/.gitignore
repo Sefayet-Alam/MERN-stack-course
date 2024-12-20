@@ -24,5 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 QNA.md
-backend/.env
-frontend/.env
+
+/blog-agency-backend/.env
+/blog-agency-frontend/.env

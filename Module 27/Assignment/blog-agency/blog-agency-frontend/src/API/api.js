@@ -1,9 +1,13 @@
 import axios from 'axios';
 
-const API = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api', // Backend URL from .env
-});
+if (!process.env.REACT_APP_API_URL) {
+  throw new Error("REACT_APP_API_URL environment variable is not set.");
+}
 
+// Create an Axios instance with the base URL from the .env file
+const API = axios.create({
+  baseURL: process.env.REACT_APP_API_URL, // Backend URL from .env
+});
 // Intercept requests to add Authorization headers if the user is logged in
 API.interceptors.request.use((req) => {
   const token = localStorage.getItem('token'); // Assuming token is stored in localStorage
