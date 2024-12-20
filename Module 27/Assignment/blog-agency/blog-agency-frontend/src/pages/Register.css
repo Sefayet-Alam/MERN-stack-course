@@ -1,0 +1,119 @@
+/* General Styles for Register Page */
+.register-page {
+    padding: 4rem;
+    max-width: 600px;
+    /* Increased width for a comfortable layout */
+    margin: 5rem auto;
+    background-color: #ffffff;
+    /* Clean white background */
+    border-radius: 16px;
+    /* Softer corners for a modern look */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2.8rem;
+    /* Large font size for title */
+    margin-bottom: 2rem;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #d9534f;
+    /* Bootstrap red for errors */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Register Form Styling */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.register-form input {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.register-form input:focus {
+    outline: none;
+    border-color: #28a745;
+    /* Green border for positive vibe */
+    box-shadow: 0 0 6px rgba(40, 167, 69, 0.3);
+}
+
+/* Button Styling */
+.register-form button {
+    padding: 1.2rem;
+    background-color: #171a18;
+    /* Green button for a unique look */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.register-form button:hover {
+    background-color: #218838;
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Links */
+.register-links {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.register-links a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-page {
+        padding: 3rem;
+        margin: 3rem 1rem;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .register-form input {
+        font-size: 1.1rem;
+    }
+
+    .register-form button {
+        font-size: 1.1rem;
+    }
+}
+
+/* Body Background */
+body {
+    background: linear-gradient(135deg, #f9f9f9, #e8e8e8);
+    /* Soft gradient for a professional feel */
+}

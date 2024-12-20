@@ -1,0 +1,88 @@
+/* General Services Page Styles */
+.service {
+    font-family: 'Arial', sans-serif;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+    min-height: 100vh;
+}
+
+/* Services Page Title */
+.service-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Services List Container */
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Service Card Styling */
+.service-card {
+    width: 320px;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    /* Clean white card background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for a classy effect */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    /* Add depth on hover */
+}
+
+/* Service Card Title */
+.service-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #101411;
+    /* Accent color for titles (Bootstrap green) */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Service Card Description */
+.service-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #d9534f;
+    /* Bootstrap red */
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* No Services Message */
+.no-services {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%;
+        max-width: 90%;
+    }
+}
